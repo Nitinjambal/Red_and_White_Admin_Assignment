@@ -1,0 +1,50 @@
+.mainDiv {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid black;
+  justify-content: center;
+}
+
+img {
+  height: 40vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.productBtn {
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.main-form {
+  display: flex;
+  border: 1px solid black;
+  flex-direction: column;
+  width: 30%;
+  margin: auto;
+  /* padding: 2rem; */
+  margin-top: 20px;
+}
+
+.main-form > input {
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.normalBtn {
+  background-color: palevioletred;
+  color: white;
+  height: 40px;
+}
+
+.titleText {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 10px;
+}
+.inputBtn {
+  cursor: pointer;
+  height: 53px;
+}
