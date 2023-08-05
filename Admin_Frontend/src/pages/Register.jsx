@@ -32,7 +32,6 @@ export default function Register() {
 
   const dispatch = useDispatch();
   const state = useSelector((store) => store.authReducer);
-  console.log(state);
 
   const handleFormData = () => {
     const data = {

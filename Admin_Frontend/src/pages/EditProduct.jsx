@@ -28,7 +28,6 @@ function EditProduct() {
     e.preventDefault();
     setIsUpdating(true);
     dispatch(updateProduct(data, id));
-    console.log("working fine");
   }
 
   useEffect(() => {

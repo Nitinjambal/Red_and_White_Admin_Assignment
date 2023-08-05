@@ -10,11 +10,11 @@ export const addProduct = (payload) => async (dispatch) => {
             withCredentials: true
         })
 
-        console.log(res)
+        // console.log(res)
         dispatch({ type: ADD_PRODUCT_SUCCESS, payload: res.data.message })
 
     } catch (error) {
-        console.log('error:', error.response.data.message)
+        // console.log('error:', error.response.data.message)
         dispatch({ type: PRODUCT_FAILURE, payload: error.response.data.message })
     }
 }
@@ -57,11 +57,11 @@ export const deleteProduct = (id) => async (dispatch) => {
         let res = await axios.delete(`https://admin-dashborard-node-backend.onrender.com/api/v1/products/${id}`, {
             withCredentials: true
         })
-        console.log("this", res)
+        // console.log("this", res)
         dispatch({ type: DELETE_PRODUCT_SUCCESS, payload: res.data.message, action: id })
 
     } catch (error) {
-        console.log('error:', error)
+        // console.log('error:', error)
         dispatch({ type: PRODUCT_FAILURE, payload: error.response.data.message })
     }
 }
@@ -74,11 +74,11 @@ export const updateProduct = (dataobj,id) => async (dispatch) => {
         let res = await axios.put(`https://admin-dashborard-node-backend.onrender.com/api/v1/products/${id}`,dataobj,{
             withCredentials:true
         })
-        console.log('res:', res)
+        // console.log('res:', res)
         dispatch({ type: UPDATE_PRODUCT_SUCCESS, payload: res.data.message })
 
     } catch (error) {
-        console.log('rror:', error)
+        // console.log('rror:', error)
         dispatch({ type: PRODUCT_FAILURE })
     }
 }

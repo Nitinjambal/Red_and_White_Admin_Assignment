@@ -11,13 +11,11 @@ export const databaseUrl = "https://admin-dashborard-node.onrender.com/api/v1";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ChakraProvider>
     <BrowserRouter>
-
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <App />
         </PersistGate>
       </Provider>
-
     </BrowserRouter>
   </ChakraProvider>
 );

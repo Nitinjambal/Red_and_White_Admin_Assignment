@@ -13,12 +13,12 @@ export const registerFunc = (payload) => (dispatch) => {
       },
       withCredentials: true,
     }).then((res) => {
-      console.log('res:', res)
+      // console.log('res:', res)
       dispatch({ type: REGISTER_SUCCESS, payload: res.data.message });
 
     })
     .catch((err) => {
-      console.log('err:', err)
+      // console.log('err:', err)
       dispatch({ type: AUTH_FAILURE, payload: err.response.data.message });
 
     });
@@ -55,10 +55,8 @@ export const loginFunction = (payload) => (dispatch) => {
     },
     withCredentials: true,
   }).then((res) => {
-    console.log('res:', res)
     dispatch({ type: LOGIN_SUCCESS, payload: res.data.message })
   }).catch((err) => {
-    console.log('err:', err)
     dispatch({ type: AUTH_FAILURE, payload: err.response.data.message })
   })
 
@@ -71,7 +69,7 @@ export const logout = async (dispatch) => {
     let res = await axios.get("https://admin-dashborard-node-backend.onrender.com/api/v1/users/logout", {
       withCredentials: true
     })
-    console.log(res.data.message)
+    // console.log(res.data.message)
     dispatch({ type: LOGOUT_SUCCESS,payload:res.data.message })
 
   } catch (error) {

@@ -17,7 +17,7 @@ export const reducer = (state = initialState, { type, payload, action }) => {
     switch (type) {
         case PRODUCT_REQUEST:
             return {
-                ...state, isLoading: true,isError:false
+                ...state, isLoading: true, isError: false
             }
 
         case ADD_PRODUCT_SUCCESS:
@@ -27,7 +27,7 @@ export const reducer = (state = initialState, { type, payload, action }) => {
 
         case PRODUCT_FAILURE:
             return {
-                ...state, isLoading: false, isError: true, productAddSuccess: false, message: payload, auth: true, deleteSuccess: false,updateSuccess:false
+                ...state, isLoading: false, isError: true, productAddSuccess: false, message: payload, auth: true, deleteSuccess: false, updateSuccess: false
 
             }
         case GET_MY_ALL_PRODUCTS_SUCCESS:
@@ -44,15 +44,15 @@ export const reducer = (state = initialState, { type, payload, action }) => {
         case DELETE_PRODUCT_SUCCESS:
 
             const updatedProducts = state.products.filter((product) => product._id !== action);
-            console.log(updatedProducts)
+            // console.log(updatedProducts)
             return {
                 ...state, isLoading: false, isError: false, auth: true, deleteSuccess: true, message: payload, products: updatedProducts
             }
 
-         case UPDATE_PRODUCT_SUCCESS:
-            return{
-                ...state,isLoading:false,isError:false,auth:true,updateSuccess:true,message:payload
-            }   
+        case UPDATE_PRODUCT_SUCCESS:
+            return {
+                ...state, isLoading: false, isError: false, auth: true, updateSuccess: true, message: payload
+            }
         default:
             return state
     }

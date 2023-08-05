@@ -31,7 +31,6 @@ export default function Login() {
   const location = useLocation();
   const dispatch = useDispatch();
   const state = useSelector((store) => store.authReducer);
-  console.log("state:", state);
 
   const handleForm = () => {
     const userData = {
